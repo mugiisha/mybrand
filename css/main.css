@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Risque', cursive;
+}
+.banner img{
+    width: 100%;
+    position: relative;
+}
+.intro {
+    position: absolute;
+    width: 40%;
+    top:30%;
+    right: 30%;
+    padding: 20px;
+    background-color: rgba(6, 14, 16, 0.8);
+    text-align: center;
+    color: white;
+    display: flex;
+}
+.intro img {
+    width:10em;
+    border-radius: 50%;
+}
+.desc h1,.desc h2{
+    margin-top: 1.8em;
+}
+.logo img {
+    height: 3em;
+}
+nav {
+    background-color: rgba(37, 37, 37, 0.8);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+}
+nav a{
+    color:white;
+    font-size: large;
+    text-decoration: none;
+}
+nav .nav-btn a {
+    margin-left: 20px;
+}
+.about-txt img {
+    width: 50px;
+    color: blue;
+    fill: blue;
+}
+#about .abt {
+    width: 50%;
+}
+#about {
+    display: flex;
+}
+.learn {
+    font-size: 52px;
+    color: gray;
+    font-weight: 100;
+} 
+.about-txt h2,p{
+    margin-left: 15px;
+    margin-bottom: 25px;
+    
+}
+.vector {
+    margin-top: 10px;
+}
+.container {
+    width: 90%;
+    background-color: #ddd;
+}
+.skills {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+.html {
+    width: 90%;
+    background-color: #FF0000;
+}
+.css {
+    width :70%;
+    background-color: #5571D4;
+}
+.js {
+    width: 65%;
+    background-color: #E7DF29;
+}
+#design {
+    display: flex;
+    justify-content: center;
+}
+#design img {
+    width: 50%;
+    /* height: 350px; */
+
+}
+.design-txt h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.design-txt p {
+    font-size: 1.2em;
+}
+.design-txt {
+    align-self: center;
+}
+.develop {
+    display: flex;
+    justify-content: center;
+}
+.develop img {
+    width: 50%;
+    /* height: 350px; */
+
+}
+.develop-txt h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.develop-txt p {
+    font-size: 1.2em;
+}
+.develop-txt {
+    align-self: center;
+}
+#port{
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+}
+#port-cont {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+#blogs {
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+}
+.blogs-cont {
+    display: flex;
+    justify-content: space-around;
+}
+.blogs-cont img {
+    width: 40%;
+    height: 150px;
+}
+.blogs-cont a {
+    text-decoration: none;
+    color: black;
+    width: 50%;
+}
+.blogs-cont div:hover{
+    background-color: rgba(6, 14, 16, 0.8);
+    color: white;
+}
+.blog1,.blog2 {
+    display: flex;
+    margin: 15px;
+    border: 1.5px solid black;
+    text-align: left;
+}
+.blog1 h2, .blog2 h2 {
+    color: rgb(160, 157, 157);
+}
+.more {
+    display: flex;
+    justify-content: center;
+}
+.more button {
+    padding: 10px;
+    background-color: rgb(58, 57, 57);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+#contact {
+    background-image: url('/images/banner.jpg');
+    color: white;
+    padding: 2em;
+    
+}
+#rev {
+    display: block;
+}
+#contact {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.review,.info {
+    background-color: rgba(6, 14, 16, 0.8);
+    padding:1.5em ;
+    display: flex;
+    width: 40%;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact input,textarea {
+    padding: 1em;
+    border-radius: 20px;
+}
+.review button{
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+.info p {
+    align-self: center;
+    justify-self: center;
+    font-size: 1.3em;
+}
+footer{
+    background-image: url('/images/banner.jpg');
+    text-align: center;
+    color: white;
+    font-size: large;
+    padding: 1.2em;
+}
