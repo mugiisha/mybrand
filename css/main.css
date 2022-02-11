@@ -25,13 +25,13 @@
     border-radius: 50%;
 }
 .desc h1,.desc h2{
-    margin-top: 1.8em;
+    margin-top: 1.8rem;
 }
 .logo img {
     height: 3em;
 }
 nav {
-    background-color: rgba(37, 37, 37, 0.8);
+    background-color: rgba(6, 14, 16, 0.8);
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -46,18 +46,27 @@ nav a{
     text-decoration: none;
 }
 nav .nav-btn a {
-    margin-left: 20px;
+    margin-left: 1.2em;
 }
 .about-txt img {
     width: 50px;
-    color: blue;
-    fill: blue;
+    margin-bottom: 8px;
 }
-#about .abt {
-    width: 50%;
+
+.about-img {
+    margin-top: -4px;
+    width: 100%;
+    height: 100%;
+}
+.about-txt {
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 #about {
     display: flex;
+}
+#about > div {
+    width: 50%;
 }
 .learn {
     font-size: 52px;
@@ -65,6 +74,7 @@ nav .nav-btn a {
     font-weight: 100;
 } 
 .about-txt h2,p{
+    margin-top: -2px;
     margin-left: 15px;
     margin-bottom: 25px;
     
@@ -99,8 +109,9 @@ nav .nav-btn a {
     justify-content: center;
 }
 #design img {
-    width: 50%;
-    /* height: 350px; */
+    width: 45%;
+    height: 100%;
+    margin-top: 2em;
 
 }
 .design-txt h2 {
@@ -114,13 +125,15 @@ nav .nav-btn a {
 }
 .design-txt {
     align-self: center;
+    margin-left: 1em;
+    /* background-color: rgba(6, 14, 16, 0.8); */
 }
 .develop {
     display: flex;
     justify-content: center;
 }
 .develop img {
-    width: 50%;
+    width: 43%;
     /* height: 350px; */
 
 }
@@ -135,21 +148,31 @@ nav .nav-btn a {
 }
 .develop-txt {
     align-self: center;
+    /* margin-left: 8px; */
 }
 #port{
     font-weight: bold;
     font-size: 1.4em;
     text-align: center;
+    margin-top: 0.8em;
 }
 #port-cont {
     display: flex;
     justify-content: space-around;
     margin-top: 2em;
 }
+#port-cont a {
+    color: black;
+    text-decoration: none;
+}
+#port-cont p {
+    margin-top: 0.2em;
+}
 #blogs {
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 1.5em;
     text-align: center;
+    margin-top: 10px;
 }
 .blogs-cont {
     display: flex;
@@ -176,6 +199,7 @@ nav .nav-btn a {
 }
 .blog1 h2, .blog2 h2 {
     color: rgb(160, 157, 157);
+    margin: 13px 5px;
 }
 .more {
     display: flex;
@@ -218,9 +242,9 @@ nav .nav-btn a {
 }
 .review button{
     align-self: flex-end;
-    margin-top: 10px;
-    padding: 8px 15px;
-    border-radius: 8px;
+    margin-top: 0.625em;
+    padding: 0.5em 0.9375em;
+    border-radius: 0.5em;
 }
 .info p {
     align-self: center;
@@ -233,4 +257,91 @@ footer{
     color: white;
     font-size: large;
     padding: 1.2em;
+}
+@media screen and (max-width:860px){
+    .about-img {
+        height: 481px;
+    }
+}
+@media screen and (max-width:796px){
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro img {
+        align-self: center;
+    }
+    .desc h1,.desc h2{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:826px){
+    .intro {
+        top:18%;
+        padding:5px
+    }
+}
+
+@media screen and (max-width:700px){
+    .review,.info{
+        width:47%;
+
+    }
+}
+@media screen and (max-width:662px){
+    .intro {
+        position: static;
+        width: 100%;
+        margin-top: -4px;
+        background-color: rgba(6, 14, 16, 0.9)
+    }
+    .about-img {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:642px){
+    #about {
+        flex-direction: column;
+    }
+    #about > div {
+        width: 100%;
+    }
+    #design {
+        flex-direction: column-reverse;
+    }
+    #design img {
+        width: 100%;
+    }
+    .develop {
+        flex-direction: column;
+    }
+    .develop img {
+        width: 100%;
+    }
+    #port-cont {
+        flex-direction: column;
+        width: 70%;
+        margin: 15px auto;
+    }
+    .blogs-cont a {
+        width: 100%;
+    }
+
+    .blogs-cont {
+        flex-direction: column;
+        width: 80%;
+        margin: 15px auto;
+    }
+    #contact {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .review , .info {
+        width: 50%;
+        align-self: center;
+
+    }
+    .info {
+        margin-top: 5px;
+    }
 }
