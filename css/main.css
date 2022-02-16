@@ -44,6 +44,26 @@ nav a{
     color:white;
     font-size: large;
     text-decoration: none;
+    padding: 8px;
+}
+.nav-btn a:hover {
+    background-color: #555;
+}
+.toggle-btn {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 35px;
+}
+.toggle-btn .bars {
+    height: 3px;
+    /* width: 100%; */
+    background-color: white;
+    border-radius: 10px;
 }
 nav .nav-btn a {
     margin-left: 1.2em;
@@ -216,7 +236,7 @@ nav .nav-btn a {
 #contact {
     background-image: url('/images/banner.jpg');
     color: white;
-    padding: 2em;
+    padding: 2rem;
     
 }
 #rev {
@@ -238,13 +258,13 @@ nav .nav-btn a {
 }
 #contact input,textarea {
     padding: 1em;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
 .review button{
     align-self: flex-end;
-    margin-top: 0.625em;
-    padding: 0.5em 0.9375em;
-    border-radius: 0.5em;
+    margin-top: 0.625rem;
+    padding: 0.5em 0.9375rem;
+    border-radius: 0.5rem;
 }
 .info p {
     align-self: center;
@@ -287,6 +307,17 @@ footer{
         width:47%;
 
     }
+    .blog1, .blog2 {
+        flex-direction: column;
+        width: 75%;
+        margin: 5px auto;
+    }
+    .blogs-cont img {
+        width: 100%;
+    }
+    .blog1 > div, .blog2 > div {
+        height: fit-content;
+    }
 }
 @media screen and (max-width:662px){
     .intro {
@@ -297,6 +328,24 @@ footer{
     }
     .about-img {
         margin-top: 0;
+    }
+    .toggle-btn {
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-btn a {
+        align-self: center;
+    }
+    .nav-btn {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-btn.active {
+        display: flex;
     }
 }
 @media screen and (max-width:642px){
@@ -329,15 +378,19 @@ footer{
 
     .blogs-cont {
         flex-direction: column;
-        width: 80%;
+        width: 90%;
         margin: 15px auto;
     }
+    .blog1,.blog2 {
+        /* flex-direction: row; */
+    }
+    
     #contact {
         flex-direction: column;
         justify-content: center;
     }
     .review , .info {
-        width: 50%;
+        width: 90%;
         align-self: center;
 
     }
