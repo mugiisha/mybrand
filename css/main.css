@@ -381,9 +381,6 @@ footer{
         width: 90%;
         margin: 15px auto;
     }
-    .blog1,.blog2 {
-        /* flex-direction: row; */
-    }
     
     #contact {
         flex-direction: column;
