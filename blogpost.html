@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/blogpost.css">
+    <title>Blogpost</title>
+</head>
+<body>
+    <div class="top">
+        <div class="subnav">
+            <i class="fa fa-bars menu" style="font-size:24px"></i>
+            <img src="/images/k.jpg" alt="">
+            <i class="fa fa-close close" style="font-size:24px"></i>
+            <!-- <h3>keppi tech</h3> -->
+        </div>
+        <div class="user">
+            <button>MA</button>
+        </div>
+
+    </div>
+    <div class="container">
+        <aside class="nav">
+
+            <div class="nav-list">
+                <ul>
+                    <li><a href="/dashboard.html" >Dashboard</a></li>
+                    <li><a href="">messsages</a></li>
+                    <li><a href="">subscribers</a></li>
+                    <li class="active"><a href="">blogpost</a></li>                   
+                    <li><a href="">notifications</a></li>
+                    <li><a href="/profile.html">profile</a></li>
+                    <li><a href="">log out</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="page">
+
+            <div class="form">
+                <form action="">
+                        <h2>create a blog</h2>
+                        <label for="title">title:</label><br>
+                        <input type="text" name="title" placeholder="enter blog's title"><br><br>
+                        <label for="name">Author:</label><br>
+                        <input type="text" name="name" placeholder="Authors' name"><br><br>
+                        <label for="date">date:</label><br>
+                        <input type="date" name="date" id=""><br><br>
+                        <label for="decription">description:</label><br>
+                        <textarea name="description" id="" cols="30" rows="10">
+                            
+                        </textarea><br>
+                        <input type="file" src="" alt=""><br><br>
+                        <button>post</button>
+                
+                    </form>
+            </div>
+            <div class="manip">
+                <div class="blogs">
+                    <li>
+
+                    </li>
+                </div>
+                <div class="change">
+                    <button class="delete">delete blog</button>
+                    <button class="add">add blog</button>
+                    <button class="edit">edit blog</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+         const menuBtn = document.getElementsByClassName('menu')[0];
+       const closeBtn = document.getElementsByClassName('close')[0];
+       const nav = document.getElementsByClassName('nav')[0];
+
+       menuBtn.addEventListener('click' , () => {
+           nav.style.display = 'inline';
+           closeBtn.style.display = 'block'
+       })
+    
+       closeBtn.addEventListener('click' , () => {
+           closeBtn.style.display = 'none'
+           nav.style.display = 'none';
+
+       })
+    </script>
+</body>
+</html>

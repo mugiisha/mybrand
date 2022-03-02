@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Risque', cursive;
+}
+.logo img {
+    height: 3em;
+}
+nav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body {
+    background-color: rgba(6, 14, 16, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.6px;
+}
+.author{
+    display: flex;
+    justify-content: center;
+    color:rgb(180, 180, 180);
+    text-decoration: underline;
+}
+p {
+    margin: 10px;
+    line-height: 1.4em;
+}
+img {
+    width: 80%;
+    align-self: center;
+    margin: 15px;
+}
+h1 {
+    align-self: center;
+    color:rgb(180, 180, 180);
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.comment , #comments {
+    margin: 15px;
+}
+.comment input, .comment textarea {
+    width: 35%;
+    padding: 1em;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    /* margin: 10px; */
+}
+li {
+    list-style: none;
+}
+/* #name {
+    margin-bottom: 5px;
+    width: 225px;
+    padding: 10px;
+} */
+li > p {
+    text-decoration: underline;
+    color: rgb(180, 180, 180) ;
+    font-size: 1.3em;
+}
+span {
+    margin-left: 10px;
+    color: white;
+    display: block;
+}
+#comments > h3{
+    text-decoration: underline;
+    color: rgb(180, 180, 180);
+}
+#comments h3 {
+    text-decoration: underline;
+    margin-left: 5px;
+}
+#btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

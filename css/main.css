@@ -8,6 +8,10 @@
 .banner img{
     width: 100%;
     position: relative;
+    margin-bottom: -4px;
+}
+body {
+    background-color: #f6f6f9;
 }
 .intro {
     position: absolute;
@@ -74,7 +78,7 @@ nav .nav-btn a {
 }
 
 .about-img {
-    margin-top: -4px;
+    margin-top: -2px;
     width: 100%;
     height: 100%;
 }
@@ -94,7 +98,7 @@ nav .nav-btn a {
     font-weight: 100;
 } 
 .about-txt h2,p{
-    margin-top: -2px;
+    margin-top: -1px;
     margin-left: 15px;
     margin-bottom: 25px;
     
@@ -129,7 +133,7 @@ nav .nav-btn a {
     justify-content: center;
 }
 #design img {
-    width: 45%;
+    width: 50%;
     height: 100%;
     margin-top: 2em;
 
@@ -153,7 +157,8 @@ nav .nav-btn a {
     justify-content: center;
 }
 .develop img {
-    width: 43%;
+    width: 40%;
+    /* overflow:hidden; */
     /* height: 350px; */
 
 }
@@ -174,7 +179,12 @@ nav .nav-btn a {
     font-weight: bold;
     font-size: 1.4em;
     text-align: center;
-    margin-top: 0.8em;
+    padding: 10px;
+    /* margin-top: -4px; */
+}
+#port h1 {
+    font-size: 1.5em;
+    /* margin-top: 0.7em; */
 }
 #port-cont {
     display: flex;
@@ -182,8 +192,12 @@ nav .nav-btn a {
     margin-top: 2em;
 }
 #port-cont a {
-    color: black;
+    color:rgb(184, 170, 170);
     text-decoration: none;
+    transition:0.5s
+}
+#port-cont a:hover {
+    transform: translate(-15px,-15px);
 }
 #port-cont p {
     margin-top: 0.2em;
@@ -192,20 +206,28 @@ nav .nav-btn a {
     font-weight: bold;
     font-size: 1.5em;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 2px;
+    margin-bottom: 8px;
 }
 .blogs-cont {
     display: flex;
     justify-content: space-around;
 }
 .blogs-cont img {
+    width: 35%;
+    margin-bottom: 0;
+}
+.blog1 img {
     width: 40%;
-    height: 150px;
 }
 .blogs-cont a {
     text-decoration: none;
     color: black;
     width: 50%;
+    transition: 0.3s;
+}
+.blogs-cont a:hover {
+    transform: translate(-10px,-10px);
 }
 .blogs-cont div:hover{
     background-color: rgba(6, 14, 16, 0.8);
@@ -213,7 +235,7 @@ nav .nav-btn a {
 }
 .blog1,.blog2 {
     display: flex;
-    margin: 15px;
+    margin: 10px;
     border: 1.5px solid black;
     text-align: left;
 }
@@ -252,12 +274,12 @@ nav .nav-btn a {
     padding:1.5em ;
     display: flex;
     width: 40%;
-    border-radius: 25px;
+    border-radius: 1em;
     flex-direction: column;
     justify-content: center;
 }
 #contact input,textarea {
-    padding: 1em;
+    padding: 0.7em;
     border-radius: 1rem;
 }
 .review button{
@@ -278,6 +300,10 @@ footer{
     font-size: large;
     padding: 1.2em;
 }
+.dark {
+    background-color:rgba(6, 14, 16, 0.8) ;
+    color:white;
+}
 @media screen and (max-width:860px){
     .about-img {
         height: 481px;
@@ -297,7 +323,7 @@ footer{
 }
 @media screen and (max-width:826px){
     .intro {
-        top:18%;
+        top:13%;
         padding:5px
     }
 }
@@ -332,6 +358,7 @@ footer{
     .toggle-btn {
         display: flex;
     }
+    
     nav{
         flex-direction: column;
         align-items: flex-start;
@@ -387,7 +414,7 @@ footer{
         justify-content: center;
     }
     .review , .info {
-        width: 90%;
+        width: 95%;
         align-self: center;
 
     }

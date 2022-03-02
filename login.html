@@ -13,28 +13,71 @@
             <img src="./images/k.jpg" alt="logo">
         </div>
         <div class="nav-btn">
-            <a href="/index.html">HOME</a>
-            <a href="#about">About</a>
+            <a href="/index.html">back to HOME</a>
+            <!-- <a href="#about">About</a>
             <a href="#design">Services</a>
             <a href="#port">portfolio</a>
             <a href="#blogs">blogs</a>
-            <a href="#contact">contacts</a>
+            <a href="#contact">contacts</a> -->
         </div>
-        <div class="login">
+        <!-- <div class="login">
             <a href="#">login</a>
-        </div>
+        </div> -->
     </nav>
     <img src="/images/banner.jpg" alt="">
-    <div class="log">
+    <form class="log">
         <label for="email">enter your email:</label><br>
-        <input type="email" name="email"><br>
+        <input type="email" id="email"><br>
         <label for="password">enter your password:</label><br>
-        <input type="password" name="password" id=""><br>
-        <button>login</button>
+        <input type="password" id="password" ><br>
+        <button id="login">login</button>
         <p>if you don't have an account <a href="/signup.html">signup</a></p>
-    </div>
+    </form>
     <footer>
         <p>&COPY;keppi 2022</p>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+
+    <script>
+         const firebaseConfig = {
+        apiKey: "AIzaSyA79T2QPGtJUheym11odQl49i40JvOsHu0",
+        authDomain: "my-brand-646a9.firebaseapp.com",
+        projectId: "my-brand-646a9",
+        storageBucket: "my-brand-646a9.appspot.com",
+        messagingSenderId: "981736859707",
+        appId: "1:981736859707:web:91087d58992aabffa8941e"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+
+    const db = app.firestore();
+    const auth = firebase.auth();
+    const login = document.querySelector('#login');
+
+    //login
+
+    login.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = document.querySelector('#email').value;
+        const password = document.querySelector('#password').value;
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Signed in
+            console.log('user logged in')
+            var user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+        });
+               
+    })
+
+    </script>
 </body>
 </html>

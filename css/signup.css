@@ -4,16 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Risque', cursive;
-    color: white;
 }
 img {
-   width: 100%;
-   height: 100vh;
-   position: relative;
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 .logo img {
-    height: 3em;
+    height: 2.5em;
 }
 nav {
     background-color: rgba(6, 14, 16, 0.8);
@@ -34,14 +33,15 @@ nav .nav-btn a {
     margin-left: 20px;
 }
 .log {
-    width: 40%;
+    width: 55%;
     position: absolute;
     background-color: rgba(6, 14, 16, 0.8);
-    top: 20%;
-    left: 35%;
+    top: 15%;
+    left: 25%;
     padding:2em;
     display: flex;
     flex-direction: column;
+    color: white;
     
 }
 input {
@@ -70,4 +70,9 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+@media screen and (max-width:479px){
+    .log {
+        top: 10%;
+    }
 }
