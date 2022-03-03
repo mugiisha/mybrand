@@ -51,8 +51,8 @@
                         <textarea name="description" id="" cols="30" rows="10">
                             
                         </textarea><br>
-                        <input type="file" src="" alt=""><br><br>
-                        <button>post</button>
+                        <input type="file" src="" alt="" id="imagefile"><br><br>
+                        <input type="button" value="submit" id="submit">
                 
                     </form>
             </div>
@@ -70,6 +70,10 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
     <script>
          const menuBtn = document.getElementsByClassName('menu')[0];
        const closeBtn = document.getElementsByClassName('close')[0];
@@ -86,5 +90,50 @@
 
        })
     </script>
+     <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyA79T2QPGtJUheym11odQl49i40JvOsHu0",
+                authDomain: "my-brand-646a9.firebaseapp.com",
+                projectId: "my-brand-646a9",
+                storageBucket: "my-brand-646a9.appspot.com",
+                messagingSenderId: "981736859707",
+                appId: "1:981736859707:web:91087d58992aabffa8941e"
+            };
+        
+            // Initialize Firebase
+            const app = firebase.initializeApp(firebaseConfig);
+            
+            const db = app.firestore();
+            const auth = firebase.auth();
+            var storage = firebase.storage();
+
+            //image
+
+            const img = document.querySelector('#imagefile');
+            const btn = document.querySelector('#submit');
+            console.log(img)
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Create a root reference
+            var storageRef = firebase.storage().ref();
+    
+            // Create a reference to 'mountains.jpg'
+            var mountainsRef = storageRef.child('img');
+    
+            // Create a reference to 'images/mountains.jpg'
+            var mountainImagesRef = storageRef.child('img');
+            console.log('uploaded')
+    
+            // While the file names are the same, the references point to different files
+            mountainsRef.name === mountainImagesRef.name;           // true
+            mountainsRef.fullPath === mountainImagesRef.fullPath;   // false 
+            })
+
+
+
+    </script>
+       
 </body>
 </html>
