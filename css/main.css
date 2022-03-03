@@ -256,7 +256,7 @@ nav .nav-btn a {
     margin-bottom: 15px;
 }
 #contact {
-    background-image: url('/images/banner.jpg');
+    background-image: url('./images/banner.jpg');
     color: white;
     padding: 2rem;
     
