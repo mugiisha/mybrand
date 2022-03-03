@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/blogpost.css">
+    <link rel="stylesheet" href="/css/blogpost.css">
     <title>Blogpost</title>
 </head>
 <body>
     <div class="top">
         <div class="subnav">
             <i class="fa fa-bars menu" style="font-size:24px"></i>
-            <img src="images/k.jpg" alt="">
+            <img src="/images/k.jpg" alt="">
             <i class="fa fa-close close" style="font-size:24px"></i>
             <!-- <h3>keppi tech</h3> -->
         </div>
@@ -26,12 +26,12 @@
 
             <div class="nav-list">
                 <ul>
-                    <li><a href="dashboard.html" >Dashboard</a></li>
+                    <li><a href="/dashboard.html" >Dashboard</a></li>
                     <li><a href="">messsages</a></li>
                     <li><a href="">subscribers</a></li>
                     <li class="active"><a href="">blogpost</a></li>                   
                     <li><a href="">notifications</a></li>
-                    <li><a href="profile.html">profile</a></li>
+                    <li><a href="/profile.html">profile</a></li>
                     <li><a href="">log out</a></li>
                 </ul>
             </div>
@@ -39,20 +39,21 @@
         <div class="page">
 
             <div class="form">
-                <form action="">
+                <form action="" id="blogform">
                         <h2>create a blog</h2>
                         <label for="title">title:</label><br>
-                        <input type="text" name="title" placeholder="enter blog's title"><br><br>
+                        <input type="text" name="title" placeholder="enter blog's title" id="title"><br><br>
                         <label for="name">Author:</label><br>
-                        <input type="text" name="name" placeholder="Authors' name"><br><br>
-                        <label for="date">date:</label><br>
-                        <input type="date" name="date" id=""><br><br>
+                        <input type="text" name="name" id="author" placeholder="Authors' name"><br><br>
+                        <!-- <label for="date">date:</label><br>
+                        <input type="date" name="date" id=""><br><br> -->
                         <label for="decription">description:</label><br>
-                        <textarea name="description" id="" cols="30" rows="10">
+                        <textarea name="description" id="description" cols="30" rows="10">
                             
                         </textarea><br>
-                        <input type="file" src="" alt="" id="imagefile"><br><br>
-                        <input type="button" value="submit" id="submit">
+                        <input type="file" name="blog_picture" id="fileimage" class="file-input"><br><br>
+                        <!-- <input type="button" value="submit" id="submit"> -->
+                        <div class="button-left"><button class="create-button">Create</button></div>
                 
                     </form>
             </div>
@@ -109,31 +110,32 @@
 
             //image
 
-            const img = document.querySelector('#imagefile');
-            const btn = document.querySelector('#submit');
-            console.log(img)
+            // const img = document.querySelector('#imagefile');
+            // const btn = document.querySelector('#submit');
+            // console.log(img)
 
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
+            // btn.addEventListener('click', (e) => {
+            //     e.preventDefault();
 
-                // Create a root reference
-            var storageRef = firebase.storage().ref();
+            //     // Create a root reference
+            // var storageRef = firebase.storage().ref();
     
-            // Create a reference to 'mountains.jpg'
-            var mountainsRef = storageRef.child('img');
+            // // Create a reference to 'mountains.jpg'
+            // var mountainsRef = storageRef.child('img');
     
-            // Create a reference to 'images/mountains.jpg'
-            var mountainImagesRef = storageRef.child('img');
-            console.log('uploaded')
+            // // Create a reference to 'images/mountains.jpg'
+            // var mountainImagesRef = storageRef.child('img');
+            // console.log('uploaded')
     
-            // While the file names are the same, the references point to different files
-            mountainsRef.name === mountainImagesRef.name;           // true
-            mountainsRef.fullPath === mountainImagesRef.fullPath;   // false 
-            })
+            // // While the file names are the same, the references point to different files
+            // mountainsRef.name === mountainImagesRef.name;           // true
+            // mountainsRef.fullPath === mountainImagesRef.fullPath;   // false 
+            // })
 
 
 
     </script>
+    <script src="blogPost.js"></script>
        
 </body>
 </html>
