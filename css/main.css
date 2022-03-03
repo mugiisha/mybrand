@@ -294,7 +294,7 @@ nav .nav-btn a {
     font-size: 1.3em;
 }
 footer{
-    background-image: url('/images/banner.jpg');
+    background-image: url('../images/banner.jpg');
     text-align: center;
     color: white;
     font-size: large;
