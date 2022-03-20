@@ -17,7 +17,7 @@ html , body {
 body:not('nav') {
     background-color: #f6f6f9;
     padding-top: 80px;
-}
+} 
 .intro {
     position: absolute;
     width: 40%;
@@ -299,7 +299,7 @@ nav .nav-btn a {
     font-size: 1.3em;
 }
 footer{
-    background-image: url('../images/banner.jpg');
+    background-image: url('/images/banner.jpg');
     text-align: center;
     color: white;
     font-size: large;
