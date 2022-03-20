@@ -1,11 +1,17 @@
 const toggleBtn = document.getElementsByClassName('toggle-btn')[0];
 const navBtn = document.getElementsByClassName('nav-btn')[0];
+const navs = document.getElementsByClassName('navu');
 
 
 toggleBtn.addEventListener('click', (e) =>{
     e.preventDefault();
     navBtn.classList.toggle('active');
+    console.log(navs)
 })
+
+// navs.addEventListener('click', (e) => {
+//     e.preventDefault();
+// })
 
 const about = document.getElementById('about');
 const design = document.getElementById('design');
