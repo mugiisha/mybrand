@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
+
 .container {
     display: flex;
     height: 100vh;
+    width: 100vw;
     background-color: rgb(196, 189, 189);
 }
 .nav {
@@ -17,15 +19,15 @@
 }
 .page {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row;
     align-self: center;
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: space-evenly;
 }
-.manip {
-    align-self: center;
-}
+
 .form {
-    width: 100%;
-    /* min-height: 100%; */
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content:space-evenly
@@ -97,8 +99,8 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    margin: 0 auto;
-    width: 80%;
+    /* margin: 0 auto; */
+    /* width: 80%; */
 }
 form {
     border: 1px solid black;
@@ -118,6 +120,45 @@ form, .form h2 {
 form button {
     padding: 6px 15px;
 }
+.blogs {
+    max-width: 30%;
+    height: 100%;
+
+}
+.blog {
+    display: flex;
+}
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blogs li{
+    /* width: 80%; */
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.blogs li img {
+    width: 50%;
+    height: 100px;
+}
+.blogs h3{
+    text-align: center;
+}
+.delete {
+    padding: 3px 7px;
+    color: white;
+    background-color: rgb(150, 31, 31);
+    cursor: pointer;
+}
+.edit {
+    padding: 3px 7px;
+    color: white;
+    background-color: rgb(19, 59, 19);
+    cursor: pointer;
+}
+
 
 @media screen and (max-width:600px){
     .nav {
