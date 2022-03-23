@@ -38,11 +38,11 @@ createBlogForm.addEventListener('submit', (e) => {
   
 });
 
-//get blogs 
-function renderblogs(doc) {
- const blogul = document.querySelector('.blog-list')
- const li = document.createElement('li')
- li.setAttribute('data-id' , doc.id);
+
+// function renderblogs(doc) {
+//  const blogul = document.querySelector('.blog-list')
+//  const li = document.createElement('li')
+//  li.setAttribute('data-id' , doc.id);
 
 
 // li.innerHTML = `<img src = '${doc.data().image}'> <h2>${doc.data().title}</h2> <p>${doc.data().descriptiojn} </p>  <div class="change">
@@ -50,38 +50,61 @@ function renderblogs(doc) {
 // <button class="edit">edit blog</button>
 // </div>`;
 
-li.innerHTML = ` <div class="blog">
-                    <img src="${doc.data().image}">
-                    <div class="blog-txt">
-                    <h2>${doc.data().title}</h2>
-                    <p>${doc.data().descriptiojn}</p>
-                    <button class="delete">delete blog</button>
-                    <button class="edit">edit blog</button>
-                    </div>
-                </div>`
-  // commentt.textContent = doc.data().comment;
+// li.innerHTML = ` <div class="blog">
+//                     <img src="${doc.data().image}">
+//                     <div class="blog-txt">
+//                     <h2>${doc.data().title}</h2>
+//                     <p>${doc.data().descriptiojn}</p>
+//                     <button class="delete">delete blog</button>
+//                     <button class="edit">edit blog</button>
+//                     </div>
+//                 </div>`
+//                 console.log(li)
+//   // commentt.textContent = doc.data().comment;
 
-  // name.appendChild(commentt)
-  blogul.appendChild(li)
+//   // name.appendChild(commentt)
+//   blogul.appendChild(li)
 
   
-}
+// }
 
-db.collection('blogs').get().then((snapshot) => {
-  snapshot.docs.forEach(doc => {
-      renderblogs(doc)
+// db.collection('blogs').get().then((snapshot) => {
+//   snapshot.docs.forEach(doc => {
+//       renderblogs(doc)
+//   })
+// })
+
+async function getblogs() {
+  const blogData = await fetch('https://mybrandbb.herokuapp.com/getblogs');
+  const blog = await blogData.json()
+  .then(blog => blog)
+  .then(data => {
+      data.forEach(d => {
+         let title = d.title;
+         let image = d.image;
+         let body = d.descr;
+         let id = d._id
+         console.log(d)
+         const blogul = document.querySelector('.blog-list')
+         const li = document.createElement('li')
+         li.setAttribute('data-id' , id);
+
+         li.innerHTML = ` <div class="blog">
+                              <div class= 'blogs-cont'>
+                                <img src="${image}">
+                                <div class="blog-txt">
+                                <h3>${title}</h3>
+                                <p>${body}</p>
+                                </div>
+                                </div>
+                            </div>
+                            <button class="delete">delete blog</button>
+                            <button class="edit">edit blog</button>`
+       
+
+         blogul.appendChild(li)
+      })
   })
-})
-
-
-//         db.collection("blogs").doc("wrqBTmuaQo3qI9KPI15l").delete().then(() => {
-//     console.log("Document successfully deleted!");
-// }).catch((error) => {
-//     console.error("Error removing document: ", error);
-// });
-
-// db.collection("comments").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         console.log(`${doc.id} => ${doc.data()}`);
-//     });
-// });
+  
+}
+getblogs()

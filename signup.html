@@ -25,7 +25,7 @@
         </div> -->
     </nav>
     <img src="/images/banner.jpg" alt="">
-    <form class="log">
+    <form id="log">
         <label for="firstname">enter your first name:</label><br>
         <input type="text" id="firstname"><br>
         <label for="lastname">enter your lastname:</label><br>
@@ -34,38 +34,40 @@
         <input type="email" id="email"><br>
         <label for="password">enter password:</label><br>
         <input type="password" id="password" id=""><br>
-        <button id="signup-btn">signup</button>
+        <button id="signup-btn" value="submit">signup</button>
+        <p id="error"></p>
+        <p id="success"></p>
         <p>if you have an account <a href="login.html">login</a></p>
     </form>
     <footer>
         <p>&COPY;keppi 2022</p>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script> -->
 
     <script>
-        const firebaseConfig = {
-        apiKey: "AIzaSyA79T2QPGtJUheym11odQl49i40JvOsHu0",
-        authDomain: "my-brand-646a9.firebaseapp.com",
-        projectId: "my-brand-646a9",
-        storageBucket: "my-brand-646a9.appspot.com",
-        messagingSenderId: "981736859707",
-        appId: "1:981736859707:web:91087d58992aabffa8941e"
-    };
+    //     const firebaseConfig = {
+    //     apiKey: "AIzaSyA79T2QPGtJUheym11odQl49i40JvOsHu0",
+    //     authDomain: "my-brand-646a9.firebaseapp.com",
+    //     projectId: "my-brand-646a9",
+    //     storageBucket: "my-brand-646a9.appspot.com",
+    //     messagingSenderId: "981736859707",
+    //     appId: "1:981736859707:web:91087d58992aabffa8941e"
+    // };
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
+    // // Initialize Firebase
+    // const app = firebase.initializeApp(firebaseConfig);
 
-    const db = app.firestore();
-    const auth = firebase.auth();
-    // auth.onAuthStateChanged((user) => {
-    //     if (user){
-    //         console.log('you are logged in')
-    //     }
+    // const db = app.firestore();
+    // const auth = firebase.auth();
+    // // auth.onAuthStateChanged((user) => {
+    // //     if (user){
+    // //         console.log('you are logged in')
+    // //     }
     // })
     </script>
-    <script src="/signup.js"></script>
+    <script src="/js/signup.js"></script>
 </body>
 </html>

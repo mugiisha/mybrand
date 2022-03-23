@@ -127,11 +127,27 @@ form button {
 }
 .blog {
     display: flex;
+    height: 8em;
 }
+.blog > img {
+    width: 50%;
+}
+.blogs-cont {
+    display: flex;
+    overflow: hidden;
+}
+.blog-list button {
+    justify-self: center;
+    align-self: center;
+}
+
 .blog-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.blogs {
+    width: 50%;
 }
 .blogs li{
     /* width: 80%; */
@@ -140,11 +156,10 @@ form button {
     margin-bottom: 10px;
 }
 .blogs li img {
-    width: 50%;
-    height: 100px;
+    height: 100%;
 }
 .blogs h3{
-    text-align: center;
+    text-decoration: underline;
 }
 .delete {
     padding: 3px 7px;

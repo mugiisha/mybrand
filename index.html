@@ -19,18 +19,14 @@
             <span class="bars"></span>
         </a>
         <div class="nav-btn">
-            <a class = 'navu' href="#">HOME</a>
-            <a class = 'navu' href="#about">About</a>
-            <a class = 'navu' href="#design">Services</a>
-            <a class = 'navu' href="#port">portfolio</a>
-            <a class = 'navu' href="#blogs">blogs</a>
-            <a class = 'navu' href="#contact">contacts</a>
-            <a class = 'navu' href="login.html">login</a>
+            <a class = 'navu' onclick="navclick()" href="#">HOME</a>
+            <a class = 'navu' onclick="navclick()" href="#about">About</a>
+            <a class = 'navu' onclick="navclick()" href="#design">Services</a>
+            <a class = 'navu' onclick="navclick()" href="#port">portfolio</a>
+            <a class = 'navu' onclick="navclick()" href="#blogs">blogs</a>
+            <a class = 'navu' onclick="navclick()" href="#contact">contacts</a>
+            <a class = 'navu' onclick="navclick()" href="login.html">login</a>
         </div>
-        <i class = 'navu' class="fa fa-adjust" style="font-size:24px;color: white;"></i>
-        <!-- <div class="log">
-            
-        </div> -->
     </nav>
     <div class="banner">
         <img src="./images/banner.jpg" alt="banner">
@@ -174,19 +170,7 @@
             console.log('user logged out')
         }
     })
-    const logout = document.querySelector('#logout')
-    
-    logout.addEventListener('click', (e) => {
-        e.preventDefault();
-        auth.signOut().then(() => {
-            console.log('user signed out')
-        })
-    })
-    
-    
-    
-    
     </script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

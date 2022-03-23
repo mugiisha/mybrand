@@ -34,12 +34,12 @@ nav a{
 nav .nav-btn a {
     margin-left: 20px;
 }
-.log {
+#log {
     width: 40%;
     position: absolute;
     background-color: rgba(6, 14, 16, 0.8);
     top: 30%;
-    left: 35%;
+    left: 32%;
     padding:2em;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,12 @@ p {
     align-self: center;
     margin-top: 10px;
 }
+#success {
+    color: green;
+}
+#error {
+    color: red;
+}
 a {
     color: red;
 }
@@ -75,19 +81,19 @@ footer{
 }
 
 @media screen and (max-width: 869px){
-    .log {
+    #log {
         width: 65%;
         left: 20%;
     }
 }
 @media screen and (max-width: 610px){
-    .log {
+    #log {
         width: 75%;
         left: 15%;
     }
 }
 @media screen and (max-width: 460px){
-    .log {
+    #log {
         width: 75%;
         left: 15%;
         top: 15%;
