@@ -9,7 +9,7 @@
 }
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgb(196, 189, 189);
 }
@@ -112,6 +112,7 @@ form {
 form, .form h2 {
     align-self: center;
     padding: 1.5rem;
+    width: 80%;
 }
 .form h2 {
     text-decoration: underline;
@@ -184,7 +185,20 @@ form button {
     display: none;
 }
 
+@media screen and (max-width: 767px){
+    .page {
+        flex-direction: column;
+    }
+    .blogs {
+        min-width: 80%;
+        margin: 5px auto;
 
+    }
+    .blog-list{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 @media screen and (max-width:600px){
     .nav {
         display: none;
@@ -205,4 +219,9 @@ form button {
     }
     
 
+}
+@media screen and (max-width: 500px){
+    .blog-list{
+        flex-direction: column;
+    }
 }
