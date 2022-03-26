@@ -1,12 +1,13 @@
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const login = document.getElementById('log')
+const login = document.getElementById('log');
+const suc = document.getElementById('success')
+const err = document.getElementById('error')
 
 function loginn(){
-    fetch('https://mybrandbb.herokuapp.com/register', {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    fetch('https://mybrandbb.herokuapp.com/login', {
       method: 'POST',
       body : JSON.stringify({
-        name : fullname,
         email: email,
         password: password
       }),
@@ -14,9 +15,24 @@ function loginn(){
     }) 
     .then(res => res.json())
     .then(response => {
-      if(response.message.includes('successfully')){
-        suc.innerHTML = `${response.message} go to login page`
-      }else {
+      if((response.message.includes('welcome'))&&(response.userinfo.role == 'admin')){
+
+        localStorage.setItem('token', response.userinfo.token)
+        localStorage.setItem('user', response.userinfo.name)
+
+         alert(response.message)
+
+          window.location.href = './dashboard.html'
+
+        }else if ((response.message.includes('welcome'))&& (response.userinfo.role == 'user')){
+          localStorage.setItem('token', response.userinfo.token)
+          localStorage.setItem('user', response.userinfo.name)
+
+          alert(response.message)
+
+          window.location.href = './index.html'
+          console.log(response)
+        } else {
         err.innerHTML = response.message
       }
     })
@@ -25,7 +41,6 @@ function loginn(){
   }
   
   login.addEventListener('submit', (e) => {
-    
     e.preventDefault();
-    login()
+    loginn()
   })

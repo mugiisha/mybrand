@@ -48,7 +48,8 @@ async function signupp(){
   .then(res => res.json())
   .then(response => {
     if(response.message.includes('successfully')){
-      suc.innerHTML = `${response.message} go to login page`
+      alert(`${response.message} go to login page`)
+      window.location.href = './login.html'
     }else {
       err.innerHTML = response.message
     }

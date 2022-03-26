@@ -214,31 +214,34 @@ nav .nav-btn a {
     margin-top: 2px;
     margin-bottom: 8px;
 }
-.blogs-cont {
+#blogs-cont {
     display: flex;
     justify-content: space-around;
 }
-.blogs-cont img {
-    width: 35%;
+#blogs-cont img {
+    width: 30%;
     margin-bottom: 0;
 }
 .blog1 img {
     width: 40%;
 }
-.blogs-cont a {
+#blogs-cont a {
     text-decoration: none;
     color: black;
     width: 50%;
-    transition: 0.3s;
+    transition: 0.5s;
 }
-.blogs-cont a:hover {
+#blogs-cont a:hover {
     transform: translate(-10px,-10px);
+    cursor: pointer;
 }
-.blogs-cont div:hover{
+#blogs-cont div:hover{
     background-color: rgba(6, 14, 16, 0.8);
     color: white;
 }
-.blog1,.blog2 {
+.blog {
+    height: 15em;
+    overflow: hidden;
     display: flex;
     margin: 10px;
     border: 1.5px solid black;
@@ -247,6 +250,7 @@ nav .nav-btn a {
 .blog1 h2, .blog2 h2 {
     color: rgb(160, 157, 157);
     margin: 13px 5px;
+    text-decoration: underline;
 }
 .more {
     display: flex;
@@ -263,20 +267,24 @@ nav .nav-btn a {
 #contact {
     background-image: url('../images/banner.jpg');
     color: white;
-    padding: 2rem;
+    padding: 8em;
     
 }
 #rev {
     display: block;
+}
+#error {
+    color: #f75050;
+    margin-top: 1rem;
 }
 #contact {
     display: flex;
     justify-content: space-around;
     align-content: center;
 }
-.review,.info {
+#review,.info {
     background-color: rgba(6, 14, 16, 0.8);
-    padding:1.5em ;
+    padding:2em;
     display: flex;
     width: 40%;
     border-radius: 1em;
@@ -287,7 +295,7 @@ nav .nav-btn a {
     padding: 0.7em;
     border-radius: 1rem;
 }
-.review button{
+#review button{
     align-self: flex-end;
     margin-top: 0.625rem;
     padding: 0.5em 0.9375rem;
@@ -334,7 +342,7 @@ footer{
 }
 
 @media screen and (max-width:700px){
-    .review,.info{
+    #review,.info{
         width:47%;
 
     }
@@ -343,7 +351,7 @@ footer{
         width: 75%;
         margin: 5px auto;
     }
-    .blogs-cont img {
+    #blogs-cont img {
         width: 100%;
     }
     .blog1 > div, .blog2 > div {
@@ -367,6 +375,9 @@ footer{
     }
     .toggle-btn {
         display: flex;
+    }
+    #contact {
+        padding: 2em;
     }
     /* .fa {
         align-self: center;
@@ -413,11 +424,11 @@ footer{
         width: 70%;
         margin: 15px auto;
     }
-    .blogs-cont a {
+    #blogs-cont a {
         width: 100%;
     }
 
-    .blogs-cont {
+    #blogs-cont {
         flex-direction: column;
         width: 90%;
         margin: 15px auto;
@@ -427,8 +438,8 @@ footer{
         flex-direction: column;
         justify-content: center;
     }
-    .review , .info {
-        width: 95%;
+    #review , .info {
+        width: 100%;
         align-self: center;
 
     }

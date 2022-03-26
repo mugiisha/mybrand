@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/k.jpg" type="image/x-icon">
+
     <link rel="stylesheet" href="css/profile.css">
     <title>Profile</title>
 </head>
@@ -27,8 +29,7 @@
             <div class="nav-list">
                 <ul>
                     <li><a href="dashboard.html" >Dashboard</a></li>
-                    <li><a href="">messsages</a></li>
-                    <li><a href="">subscribers</a></li>
+                    <li><a href="info.html">info</a></li>
                     <li class=""><a href="blogpost.html">blogpost</a></li>                   
                     <li><a href="">notifications</a></li>
                     <li class="active"><a href="profile.html">profile</a></li>
@@ -70,5 +71,22 @@
                 </div>
             </div>
         </div>
+        <script>
+             const menuBtn = document.getElementsByClassName('menu')[0];
+       const closeBtn = document.getElementsByClassName('close')[0];
+       const nav = document.getElementsByClassName('nav')[0];
+
+       menuBtn.addEventListener('click' , () => {
+           nav.style.display = 'inline';
+           closeBtn.style.display = 'block'
+       })
+    
+       closeBtn.addEventListener('click' , () => {
+           closeBtn.style.display = 'none'
+           nav.style.display = 'none';
+
+       })
+
+        </script>
 </body>
 </html>

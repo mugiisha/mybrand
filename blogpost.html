@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/k.jpg" type="image/x-icon">
+
     <link rel="stylesheet" href="/css/blogpost.css">
     <title>Blogpost</title>
 </head>
@@ -27,8 +29,7 @@
             <div class="nav-list">
                 <ul>
                     <li><a href="/dashboard.html" >Dashboard</a></li>
-                    <li><a href="">messsages</a></li>
-                    <li><a href="">subscribers</a></li>
+                    <li><a href="info.html">info</a></li>
                     <li class="active"><a href="">blogpost</a></li>                   
                     <li><a href="">notifications</a></li>
                     <li><a href="/profile.html">profile</a></li>
@@ -43,17 +44,18 @@
                         <h2>create a blog</h2>
                         <label for="title">title:</label><br>
                         <input type="text" name="title" placeholder="enter blog's title" id="title"><br><br>
-                        <label for="name">Author:</label><br>
-                        <input type="text" name="name" id="author" placeholder="Authors' name"><br><br>
+                        <!-- <label for="name">Author:</label><br>
+                        <input type="text" name="name" id="author" placeholder="Authors' name"><br><br> -->
                         <!-- <label for="date">date:</label><br>
                         <input type="date" name="date" id=""><br><br> -->
                         <label for="decription">description:</label><br>
                         <textarea name="description" id="description" cols="30" rows="10">
                             
                         </textarea><br>
-                        <input type="file" name="blog_picture" id="fileimage" class="file-input"><br><br>
-                        <!-- <input type="button" value="submit" id="submit"> -->
-                        <div class="button-left"><button class="create-button">Create</button></div>
+                        <input type="file" id="url" name="url" ><br>
+                        <p id="error"></p>
+                        <button id="create-button" value="submit">Create</button>
+                        <button id="update-button" value="submit">Update</button>
                 
                     </form>
             </div>
@@ -65,7 +67,7 @@
                 </div>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
@@ -103,10 +105,11 @@
             var storage = firebase.storage();
 
             //image
+ -->
 
-
-    </script>
-    <script src="blogPost.js"></script>
+    <!-- </script> -->
+    
+    <script src="js/blogPost.js"></script>
        
 </body>
 </html>

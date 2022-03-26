@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
-
+#error {
+    color: red;
+}
 .container {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(196, 189, 189);
 }
 .nav {
@@ -34,6 +36,7 @@
 }
 .nav-list {
     text-align: left;
+
 }
 .nav-list li {
     width: 100%;
@@ -172,6 +175,13 @@ form button {
     color: white;
     background-color: rgb(19, 59, 19);
     cursor: pointer;
+}
+#create-button {
+    background-color: #337921;
+}
+#update-button {
+    background-color: #ebe98a;
+    display: none;
 }
 
 

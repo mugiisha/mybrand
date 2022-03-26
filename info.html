@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="shortcut icon" href="./images/k.jpg" type="image/x-icon">
+    <title>info</title>
+</head>
+<body>
+    <div class="top">
+        <div class="subnav">
+            <i class="fa fa-bars menu" style="font-size:24px"></i>
+            <img src="images/k.jpg" alt="">
+            <i class="fa fa-close close" style="font-size:24px"></i>
+            <!-- <h3>keppi tech</h3> -->
+        </div>
+        <div class="user">
+            <button>MA</button>
+        </div>
+
+    </div>
+    <div class="container">
+        <aside class="nav">
+
+            <div class="nav-list">
+                <ul>
+                    <li><a href="dashboard.html" >Dashboard</a></li>
+                    <li class="active"><a href="" >info</a></li>
+                    <li class=""><a href="blogpost.html">blogpost</a></li>                   
+                    <li><a href="">notifications</a></li>
+                    <li ><a href="profile.html">profile</a></li>
+                    <li class="out"><a href="">log out</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="page">
+            <div id="users">
+                <button id="users-btn">get users</button>
+            </div>
+            <div id="messages">
+                <button id="messages-btn">get messages</button>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const menuBtn = document.getElementsByClassName('menu')[0];
+  const closeBtn = document.getElementsByClassName('close')[0];
+  const nav = document.getElementsByClassName('nav')[0];
+
+  menuBtn.addEventListener('click' , () => {
+      nav.style.display = 'inline';
+      closeBtn.style.display = 'block'
+  })
+
+  closeBtn.addEventListener('click' , () => {
+      closeBtn.style.display = 'none'
+      nav.style.display = 'none';
+
+  })
+
+   </script>
+    <script src="/js/info.js"></script>
+</body>
+</html>
