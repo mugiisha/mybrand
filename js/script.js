@@ -58,7 +58,7 @@ async function getdata() {
         blogDisp.forEach(blog => {
             const pageblog = document.createElement('a')
             pageblog.setAttribute('data-id', blog._id)
-            pageblog.setAttribute('href', "/blogin.html")
+            pageblog.setAttribute('href', "blogin.html")
                 pageblog.innerHTML = `
                 <div class="blog2 blog" onclick = "blogid(this.parentElement.getAttribute('data-id'))">
                         <img src="${blog.image}" class="blog-img" alt="">
