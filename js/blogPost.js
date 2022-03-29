@@ -192,7 +192,7 @@ async function updateblog(){
     formData.append("author", localStorage.getItem('user'))
     formData.append("image", imageURL)
     let token = localStorage.getItem('token')
-
+  
     await fetch (`https://mybrandbb.herokuapp.com/updateblog/${id}`, {
       method: 'PATCH',
       body : formData,
