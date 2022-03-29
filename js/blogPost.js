@@ -202,12 +202,11 @@ async function updateblog(){
     })
     .then(res => res.json())
     .then(resp => {
-      // if (resp.message.includes('successfully')){
-      //   alert(resp.message)
-      //   location.reload()
-      // }else {
-        // err.innerHTML = resp.message
-        console.log(resp)
-      // }
+      if (resp.message.includes('successfully')){
+        alert(resp.message)
+        location.reload()
+      }else {
+        err.innerHTML = resp.message
+       }
     })
 }
