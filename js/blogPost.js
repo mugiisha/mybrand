@@ -200,7 +200,7 @@ async function updateblog(){
         "Authorization": `bearer ${token}`
       }
     })
-    .then(res => res.blob())
+    .then(res => res.json())
     .then(resp => {
       // if (resp.message.includes('successfully')){
       //   alert(resp.message)
