@@ -107,12 +107,13 @@
 }
 form {
     border: 1px solid black;
+    padding: 2em;
 
 }
 form, .form h2 {
     align-self: center;
     padding: 1.5rem;
-    width: 80%;
+    width: 100%;
 }
 .form h2 {
     text-decoration: underline;
