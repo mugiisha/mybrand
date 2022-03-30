@@ -190,7 +190,9 @@ async function updateblog(){
     formData.append("title", Title.value)
     formData.append("descr", description.value)
     formData.append("author", localStorage.getItem('user'))
-    formData.append("image", imageURL)
+    if(imageURL) {
+      formData.append("image", imageURL)
+    }
     let token = localStorage.getItem('token')
   
     await fetch (`https://mybrandbb.herokuapp.com/updateblog/${id}`, {
@@ -204,8 +206,9 @@ async function updateblog(){
     .then(res => res.json())
     .then(resp => {
       if (resp.message.includes('successfully')){
-        alert(resp.message)
-        location.reload()
+        // alert(resp.message)
+        // location.reload()
+        console.log(resp)
       }else {
         err.innerHTML = resp.message
        }
