@@ -225,3 +225,11 @@ form button {
         flex-direction: column;
     }
 }
+@media screen and (max-width: 344px){
+    #title  {
+        padding:0.5em 1.3em;
+    }
+    #description {
+        width: 100%;
+    }
+}

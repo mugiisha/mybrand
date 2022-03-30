@@ -194,10 +194,11 @@ async function updateblog(){
     let token = localStorage.getItem('token')
   
     await fetch (`https://mybrandbb.herokuapp.com/updateblog/${id}`, {
-      method: 'PATCH',
+      method:'PATCH',
       body : formData,
       headers : {
         "Authorization": `bearer ${token}`
+
       }
     })
     .then(res => res.json())
