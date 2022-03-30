@@ -169,8 +169,10 @@ async function createblog() {
 }
 
 async function loadUpdate(id){
+  const imageURL = document.getElementById('url')
   createBtn.style.display = "none";
-  updateBtn.style.display = "block"
+  updateBtn.style.display = "block";
+  imageURL.style.display = "none"
   await fetch (`https://mybrandbb.herokuapp.com/getblog/${id}`)
   .then(res => res.json())
   .then(response => {
@@ -186,29 +188,30 @@ async function updateblog(){
     const err = document.getElementById('error')
     let imageURL = document.getElementById('url').files[0];
     const id = localStorage.getItem('blogid')
-    const formData = new FormData();
-    formData.append("title", Title.value)
-    formData.append("descr", description.value)
-    formData.append("author", localStorage.getItem('user'))
-    if(imageURL) {
-      formData.append("image", imageURL)
-    }
+    // const formData = new FormData();
+    // formData.append("title", Title.value)
+    // formData.append("descr", description.value)
+    // formData.append("author", localStorage.getItem('user'))
+    // formData.append("image", imageURL)
     let token = localStorage.getItem('token')
   
     await fetch (`https://mybrandbb.herokuapp.com/updateblog/${id}`, {
       method:'PATCH',
-      body : formData,
+      body : JSON.stringify({
+        title: Title.value,
+        descr: description.value
+      }),
       headers : {
-        "Authorization": `bearer ${token}`
+        "Authorization": `bearer ${token}`,
+        "Content-type": "application/json;charset=UTF-8"
 
       }
     })
     .then(res => res.json())
     .then(resp => {
       if (resp.message.includes('successfully')){
-        // alert(resp.message)
-        // location.reload()
-        console.log(resp)
+        alert(resp.message)
+        location.reload()
       }else {
         err.innerHTML = resp.message
        }
