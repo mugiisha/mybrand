@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Risque&display=swap'); */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Risque', cursive;
+    /* font-family: 'Risque', cursive; */
 }
 /* html , body {
     height: 100%;
@@ -54,10 +54,30 @@ nav a{
     font-size: large;
     text-decoration: none;
     padding: 8px;
+    position: relative;
+    text-transform: uppercase;
+   
 }
 .nav-btn a:hover {
     background-color: #555;
 }
+
+.nav-btn a::after{
+    content: '';
+    background-color: aqua;
+    height: 2px;
+    bottom: -3px;
+    width: 0%;
+    right: 0;
+    position: absolute;
+    left: 0;
+    transition: 1s ease-in-out ;
+}
+.nav-btn a:hover::after{
+    width: 100%;
+    right: 0;
+}
+
 .toggle-btn {
     position: absolute;
     top: .75rem;
