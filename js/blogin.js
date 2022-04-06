@@ -10,10 +10,8 @@ const commentBtn = document.getElementById('btn')
 const id = localStorage.getItem('blogid');
 
 
-commentBtn.addEventListener('click', (e) => {
-  e.preventDefault()
+commentBtn.addEventListener('click', () => {
   commeting()
-  location.reload()
 })
 
 async function getblog() {
@@ -45,7 +43,8 @@ async function getblog() {
   .then(res => res.json())
   .then(response => {
     if(response.message.includes('successfully')){
-     alert(response.message)
+     alert(response.message);
+     location.reload()
     }else {
       err.innerHTML = response.message
     }
