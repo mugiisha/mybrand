@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(196, 189, 189);
+}
+.nav {
+    background-color: rgba(6, 14, 16, 0.8);
+     width: 20%;
+     color: white;
+     /* height: 100%; */
+}
+.page {
+    display: flex;
+    /* flex-direction: column; */
+    align-self: center;
+}
+.manip {
+    align-self: center;
+}
+.form {
+    width: 100%;
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly
+}
+.nav-list {
+    text-align: left;
+}
+.nav-list li {
+    width: 100%;
+    list-style: none;
+    padding: 15px
+}
+.nav-list ul {
+    width: 100%;
+    padding-left: 0;
+}
+.nav-list a {
+    color: rgb(161, 153, 153);
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    transition: 0.3s;
+}
+.nav-list a:hover{
+    color: black;
+    transform: translateX(10px);
+}
+.nav-list li{
+    width: 100%;
+    display: flex;
+}
+.nav-list li:hover{
+    background-color: white;
+    color: black;
+}
+.active {
+    background-color: white;
+    border: 1px solid black;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: grey;
+}
+.user button{
+    margin-right: 10px;
+    background-color: #ebe98a;
+    padding: 6px 9px;
+    border-radius: 50%;
+    border: 1px solid #ba6a45;
+    height: 80%;
+}
+.subnav {
+    display:flex ;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    background-color: grey;
+}
+.subnav img {
+    width: 3em;
+}
+.menu, .close {
+    display: none;
+}
+.form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+form {
+    border: 1px solid black;
+
+}
+form, .form h2 {
+    align-self: center;
+    padding: 1.5rem;
+}
+.form h2 {
+    text-decoration: underline;
+}
+.form input{
+    padding: 0.6rem 2rem;
+    border-radius: 8px;
+}
+form button {
+    padding: 6px 15px;
+}
+
+@media screen and (max-width:600px){
+    .nav {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        height: 100%;
+        width: 35%;
+        transition: all 300ms ease;
+    }
+    .form {
+        width: 100%;
+    }
+    .subnav img {
+        display: none;
+    }
+    .fa-bars {
+        display: block;
+    }
+    
+
+}

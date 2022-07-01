@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* height: 100vh;
+    width: 100vw; */
+    background-color: rgb(196, 189, 189);
+}
+.page {
+    height: 100%;
+    padding: 2rem;
+    /* width: 80%; */
+}
+.user {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.user-info {
+    display: flex;
+    width: 50%;
+}
+.nav {
+    background-color: rgba(6, 14, 16, 0.8);
+     width: 20%;
+     color: white;
+     /* height: 100%; */
+}
+.nav-list {
+    text-align: left;
+}
+.nav-list li {
+    width: 100%;
+    list-style: none;
+    padding: 15px
+}
+.nav-list ul {
+    width: 100%;
+    padding-left: 0;
+}
+.nav-list a {
+    color: rgb(161, 153, 153);
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    transition: 0.3s;
+}
+.nav-list a:hover{
+    color: black;
+    transform: translateX(10px);
+}
+.nav-list li{
+    width: 100%;
+    display: flex;
+}
+.nav-list li:hover{
+    background-color: white;
+    color: black;
+}
+.active {
+    background-color: white;
+    border: 1px solid black;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    width: 100vw;
+    background-color: grey;
+}
+.subnav {
+    display:flex ;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    background-color: grey;
+}
+.subnav img {
+    width: 3em;
+}
+.menu, .close {
+    display: none;
+}
+.usere button{
+    margin-right: 10px;
+    background-color: #ebe98a;
+    padding: 6px 9px;
+    border-radius: 50%;
+    border: 1px solid #ba6a45;
+    height: 80%;
+}
+.user-info img {
+    height: 10rem;
+    border-radius: 50%;
+}
+.info {
+    align-self: center;
+    justify-self: center;
+    margin-left: 1.5rem;
+}
+.password {
+    margin-top: 3rem;
+    width: 100%;
+}
+form input {
+    padding: 0.5rem 0.7rem;
+    width: 50%;
+}
+
+
+.info span {
+    color: rgb(97, 67, 67);
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: 700;
+}
+.user button {
+    padding: 0.3rem 0.8rem;
+    background-color: #ba6a45;
+}
+form button {
+    padding: 0.3rem 1rem;
+    background-color:#ba6a45;
+}
+
+
+
+
+
+@media screen and (max-width:600px){
+    .nav {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        height: 100%;
+        width: 35%;
+        transition: all 300ms ease;
+    }
+    .form {
+        width: 100%;
+    }
+    .subnav img {
+        display: none;
+    }
+    .fa-bars {
+        display: block;
+    }
+    
+
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="	https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="top">
+        <div class="subnav">
+            <i class="fa fa-bars menu" style="font-size:24px"></i>
+            <img src="images/k.jpg" alt="">
+            <i class="fa fa-close close" style="font-size:24px"></i>
+            <!-- <h3>keppi tech</h3> -->
+        </div>
+        <div class="user">
+            <button>MA</button>
+        </div>
+
+    </div>
+    <div class="container">
+        <aside class="nav">
+            <div class="nav-list">
+                <ul>
+                    <li class="active"><a href="" >Dashboard</a></li>
+                    <li><a href="">messsages</a></li>
+                    <li><a href="">subscribers</a></li>
+                    <li><a href="blogpost.html">blogpost</a></li>                   
+                    <li><a href="">notifications</a></li>
+                    <li><a href="profile.html">profile</a></li>
+                    <li class="out"><a href="">log out</a></li>
+                </ul>
+            </div>
+
+        </aside>
+        <main class="page">
+            <div class="numbers">
+                <div class="subs">
+                    <div class="subs-logo logo">
+                        <i class="fa fa-bell" style="font-size:36px"></i>
+                    </div>
+                    <div class="subs-num num">
+                        <p>500</p>
+                        <p>subscribers</p>
+                    </div>
+                </div>
+                <div class="visitors">
+                    <div class="visitors-logo logo">
+                        <i class="fa fa-group" style="font-size:36px"></i>
+                    </div>
+                    <div class="visitors-num num">
+                        <p>2K</p>
+                        <p>visitors</p>
+                    </div>
+                </div>
+                <div class="services">
+                    <div class="services-logo logo">
+                        <i class="fa fa-briefcase" style="font-size:36px"></i>
+                    </div>
+                    <div class="services-num num">
+                        <p>4</p>
+                        <p>services</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="latest">
+                <h3>Latest reviews</h3>
+                <a href="">YASSIN Shyaka <span>1</span></a>
+                <a href="">ALLY Mukunzi <span>3</span></a>
+                <a href="">JEAN Gakiro <span>1</span></a>
+            </div>
+            <hr>
+            <!-- <div class="charts"> -->
+                <canvas id="mychart">
+
+                </canvas>
+            <!-- </div> -->
+           
+        </main>
+    </div>
+   <script>
+       let myChart = document.getElementById('mychart').getContext('2d');
+
+       let dashChart = new Chart(myChart, {
+           type:'bar',
+           data:{
+               labels:['visits','subscribes','likes','reviews'],
+               datasets:[{
+                   label:'people',
+                   data:[
+                        2000,
+                        500,
+                        700,
+                        80
+                    ],
+                    backgroundColor: ['#ba6a45','#ebe98a','#4d508c','#4e7a4b'],
+               }]
+           },
+           options:{
+            //    mantainAspctRatio: false,
+           }
+       });
+
+       const menuBtn = document.getElementsByClassName('menu')[0];
+       const closeBtn = document.getElementsByClassName('close')[0];
+       const nav = document.getElementsByClassName('nav')[0];
+
+       menuBtn.addEventListener('click' , () => {
+           nav.style.display = 'inline';
+           closeBtn.style.display = 'block'
+       })
+    
+       closeBtn.addEventListener('click' , () => {
+           closeBtn.style.display = 'none'
+           nav.style.display = 'none';
+
+       })
+
+    
+   </script> 
+</body>
+</html>
